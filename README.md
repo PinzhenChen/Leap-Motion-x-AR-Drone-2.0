@@ -1,4 +1,4 @@
-# Control a Parrot AR Drone 2.0 using a Leap Motion in Node.js.
+# Control a Parrot AR Drone 2.0 using a Leap Motion with Node.js.
 
 # Install
 
