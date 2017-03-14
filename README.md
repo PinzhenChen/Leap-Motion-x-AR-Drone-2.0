@@ -28,7 +28,3 @@ To activate speed, go into the leap.js file in the public folder and comment out
 * Faye for publishing and subscribing between leap, server and drone
 * Leap.js for converting leap motions into javascript
 * jQuery for browser displays
-
-# Learn More
-
-I also recreated the same project using the Cylon.js framework. You can find a tutorial for this here: https://charliegerard.wordpress.com/2015/01/20/drone-leap-motion-cylon-js/
