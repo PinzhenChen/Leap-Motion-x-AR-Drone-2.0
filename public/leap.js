@@ -12,7 +12,7 @@ var droneCommandsHandler = function () {
 
   flying = false; // used to prevent action while drone is dormant
   timeout = 400;  // used for each server publish
-  speedAdjuster = 2.5; // higher number decreases action speed.  DO NOT set to less than 1
+  speedAdjuster = 20; // higher number decreases action speed.  DO NOT set to less than 1
 
   var mainRoutine = function (frame) { // Runs on every frame
     gestureHandler(frame);
@@ -42,7 +42,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'left'
-        // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout);
   };
@@ -55,7 +55,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'right'
-            // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout);
   };
@@ -67,7 +67,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'up'
-        // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout/2);
   };
@@ -79,7 +79,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'down'
-        // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout/2);
   };
@@ -92,7 +92,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'front'
-        // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout/3);
   };
@@ -104,7 +104,7 @@ var droneCommandsHandler = function () {
     setTimeout(function (){
       return faye.publish("/drone/move", {
         action: 'back'
-        // speed: speedAdjuster
+        speed: speedAdjuster
       })
     }, timeout/3);
   };
